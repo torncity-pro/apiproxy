@@ -1,20 +1,8 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This project aims to create a C# interface to the Torn.com API.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Usage
+Import the nupkg into your C# project and use the TornHttpProxy to query the endpoints desired. The first argument will be the Id of what is being queried (string.empty accepted for self-queries). The second argument is a params list of a given field type for the endpoint being called. For instance GetUserProperties(string.Empty, UserField.Honors) will retrieve the honors the api key owner has earned.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Contibute
+If any errors are encountered while using please file a bug. Additionally if desired please open a pull request with the proposed fix.
