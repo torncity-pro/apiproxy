@@ -24,7 +24,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
     <Copyright>2019</Copyright>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
     <PackageId>TornCityDotNet</PackageId>
     <Authors />
     <Company />
