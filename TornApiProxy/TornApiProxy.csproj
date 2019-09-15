@@ -24,14 +24,17 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
     <Copyright>2019</Copyright>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <PackageId>TornCityDotNet</PackageId>
-    <Authors />
-    <Company />
-    <Product />
+    <Authors>Anonymous</Authors>
+    <Company>toncity.pro</Company>
+    <Product>TornApiProxy</Product>
     <Description>A comprehensive interface to the Torn City API.</Description>
     <PackageTags>Torn TornCity City API Proxy</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://sourcecode.torncity.pro</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/torncity-pro/apiproxy</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
