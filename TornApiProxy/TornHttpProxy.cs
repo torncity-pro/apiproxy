@@ -57,44 +57,44 @@
             this.apiKey = apiKey;
         }
 
-        public async Task<UserPropertyBag> GetUserProperties(string userId, params UserField[] fields)
+        public async Task<UserPropertyBag> GetUserPropertiesAsync(string userId, params UserField[] fields)
         {
-            return await this.GetPropertiesAsync<UserPropertyBag>(USER, userId, fields);
+            return await this.GetPropertiesAsync<UserPropertyBag>(USER, userId, fields).ConfigureAwait(false);
         }
 
-        public async Task<ItemMarketPropertyBag> GetItemMarketListings(string itemId, params ItemField[] fields)
+        public async Task<ItemMarketPropertyBag> GetItemMarketListingsAsync(string itemId, params ItemField[] fields)
         {
-            return await this.GetPropertiesAsync<ItemMarketPropertyBag>(ITEM, itemId, fields);
+            return await this.GetPropertiesAsync<ItemMarketPropertyBag>(ITEM, itemId, fields).ConfigureAwait(false);
         }
         public async Task<CompanyPropertyBag> GetCompanyPropertiesAsync(string companyId, params CompanyField[] fields)
         {
-            return await this.GetPropertiesAsync<CompanyPropertyBag>(COMPANY, companyId, fields);
+            return await this.GetPropertiesAsync<CompanyPropertyBag>(COMPANY, companyId, fields).ConfigureAwait(false);
         }
 
         public async Task<PropertyPropertyBag> GetPropertyPropertiesAsync(string propertyId, params PropertyField[] fields)
         {
-            return await this.GetPropertiesAsync<PropertyPropertyBag>(PROPERTY, propertyId, fields);
+            return await this.GetPropertiesAsync<PropertyPropertyBag>(PROPERTY, propertyId, fields).ConfigureAwait(false);
         }
 
         public async Task<FactionPropertyBag> GetFactionPropertiesAsync(string factionId, params FactionField[] fields)
         {
-            return await this.GetPropertiesAsync<FactionPropertyBag>(FACTION, factionId, fields);
+            return await this.GetPropertiesAsync<FactionPropertyBag>(FACTION, factionId, fields).ConfigureAwait(false);
         }
 
         public async Task<TornPropertyBag> GetTornPropertiesAsync(string id, params TornField[] fields)
         {
-            return await this.GetPropertiesAsync<TornPropertyBag>(TORN, id, fields);
+            return await this.GetPropertiesAsync<TornPropertyBag>(TORN, id, fields).ConfigureAwait(false);
         }
 
         private async Task<T> GetPropertiesAsync<T>(string resourceName, string id, params ApiField[] fields) where T : PropertyBagBase
         {
-            return await this.GetResource<T>(string.Format("{0}/{1}?key={2}&selections={3}", resourceName, id, this.apiKey, string.Join(",", fields.Select(i => i.fieldName))));
+            return await this.GetResourceAsync<T>(string.Format("{0}/{1}?key={2}&selections={3}", resourceName, id, this.apiKey, string.Join(",", fields.Select(i => i.fieldName)))).ConfigureAwait(false);
         }
 
-        private async Task<T> GetResource<T>(string resource) where T : PropertyBagBase
+        private async Task<T> GetResourceAsync<T>(string resource) where T : PropertyBagBase
         {
             var request = new HttpRequestMessage(HttpMethod.Get, resource);
-            var response = await this.httpClient.SendAsync(request);
+            var response = await this.httpClient.SendAsync(request).ConfigureAwait(false);
 
             if (response.IsSuccessStatusCode)
             {

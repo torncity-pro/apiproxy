@@ -23,279 +23,279 @@
     public class Stats
     {
         [JsonProperty("timestamp")]
-        public int timestamp { get; set; }
+        public int Timestamp { get; set; }
 
         [JsonProperty("users_total")]
-        public int users_total { get; set; }
+        public int TotalUsers { get; set; }
 
         [JsonProperty("users_male")]
-        public int users_male { get; set; }
+        public int MaleUsers { get; set; }
 
         [JsonProperty("users_female")]
-        public int users_female { get; set; }
+        public int FemaleUsers { get; set; }
 
         [JsonProperty("users_marriedcouples")]
-        public int users_marriedcouples { get; set; }
+        public int MarriedUsers { get; set; }
 
         [JsonProperty("users_daily")]
-        public int users_daily { get; set; }
+        public int DailyUsers { get; set; }
 
         [JsonProperty("total_users_logins")]
-        public int total_users_logins { get; set; }
+        public int TotalUserLogins { get; set; }
 
         [JsonProperty("total_users_playtime")]
-        public string total_users_playtime { get; set; }
+        public string TotalUserPlaytime { get; set; }
 
         [JsonProperty("job_army")]
-        public int job_army { get; set; }
+        public int TotalArmyJobs { get; set; }
 
         [JsonProperty("job_grocer")]
-        public int job_grocer { get; set; }
+        public int TotalGrocerJobs { get; set; }
 
         [JsonProperty("job_medical")]
-        public int job_medical { get; set; }
+        public int TotalMedicalJobs { get; set; }
 
         [JsonProperty("job_casino")]
-        public int job_casino { get; set; }
+        public int TotalCasinoJobs { get; set; }
 
         [JsonProperty("job_education")]
-        public int job_education { get; set; }
+        public int TotalEducationJobs { get; set; }
 
         [JsonProperty("job_law")]
-        public int job_law { get; set; }
+        public int TotalLawJobs { get; set; }
 
         [JsonProperty("job_company")]
-        public int job_company { get; set; }
+        public int TotalCompanyJobs { get; set; }
 
         [JsonProperty("job_none")]
-        public int job_none { get; set; }
+        public int TotalUnemployed { get; set; }
 
         [JsonProperty("crimes")]
-        public int crimes { get; set; }
+        public int TotalCrimes { get; set; }
 
         [JsonProperty("jailed")]
-        public int jailed { get; set; }
+        public int Jailed { get; set; }
 
         [JsonProperty("money_onhand")]
-        public long money_onhand { get; set; }
+        public long TotalMoneyOnHand { get; set; }
 
         [JsonProperty("money_average")]
-        public int money_average { get; set; }
+        public int AverageMoneyOnHand { get; set; }
 
         [JsonProperty("money_citybank")]
-        public long money_citybank { get; set; }
+        public long TotalMoneyBanked { get; set; }
 
         [JsonProperty("items")]
-        public int items { get; set; }
+        public int TotalItems { get; set; }
 
         [JsonProperty("events")]
-        public int events { get; set; }
+        public int TotalEvents { get; set; }
 
         [JsonProperty("points_total")]
-        public int points_total { get; set; }
+        public int TotalPoints { get; set; }
 
         [JsonProperty("points_market")]
-        public int points_market { get; set; }
+        public int TotalPointsOnMarket { get; set; }
 
         [JsonProperty("points_averagecost")]
-        public int points_averagecost { get; set; }
+        public int AveragePointsCost { get; set; }
 
         [JsonProperty("points_bought")]
-        public int points_bought { get; set; }
+        public int TotalPointsBought { get; set; }
 
         [JsonProperty("total_points_boughttotal")]
-        public int total_points_boughttotal { get; set; }
+        public int TotalMoneySpentOnPoints { get; set; }
 
         [JsonProperty("total_attacks_won")]
-        public int total_attacks_won { get; set; }
+        public int TotalAttacksWon { get; set; }
 
         [JsonProperty("total_attacks_lost")]
-        public int total_attacks_lost { get; set; }
+        public int TotalAttacksLost { get; set; }
 
         [JsonProperty("total_attacks_stalemated")]
-        public int total_attacks_stalemated { get; set; }
+        public int TotalAttacksStalemated { get; set; }
 
         [JsonProperty("total_attacks_runaway")]
-        public int total_attacks_runaway { get; set; }
+        public int TotalAttacksEscaped { get; set; }
 
         [JsonProperty("total_attacks_hits")]
-        public int total_attacks_hits { get; set; }
+        public int TotalCombatHits { get; set; }
 
         [JsonProperty("total_attacks_misses")]
-        public int total_attacks_misses { get; set; }
+        public int TotalCombatMisses { get; set; }
 
         [JsonProperty("total_attacks_criticalhits")]
-        public int total_attacks_criticalhits { get; set; }
+        public int TotalCombatCriticalHits { get; set; }
 
         [JsonProperty("total_attacks_roundsfired")]
-        public int total_attacks_roundsfired { get; set; }
+        public int TotalCombatRoundsFired { get; set; }
 
         [JsonProperty("total_attacks_stealthed")]
-        public int total_attacks_stealthed { get; set; }
+        public int TotalAttacksStealthed { get; set; }
 
         [JsonProperty("total_attacks_moneymugged")]
-        public long total_attacks_moneymugged { get; set; }
+        public long TotalMoneyMugged { get; set; }
 
         [JsonProperty("total_attacks_respectgained")]
-        public int total_attacks_respectgained { get; set; }
+        public int TotalRespectGainedByAttacking { get; set; }
 
         [JsonProperty("total_items_marketbought")]
-        public int total_items_marketbought { get; set; }
+        public int TotalItemsBoughtFromItemMarket { get; set; }
 
         [JsonProperty("total_items_bazaarbought")]
-        public int total_items_bazaarbought { get; set; }
+        public int TotalItemsBoughtFromBazaars { get; set; }
 
         [JsonProperty("total_items_auctionswon")]
-        public int total_items_auctionswon { get; set; }
+        public int TotalItemAuctionsWon { get; set; }
 
         [JsonProperty("total_items_sent")]
-        public int total_items_sent { get; set; }
+        public int TotalItemsSends { get; set; }
 
         [JsonProperty("total_trades")]
-        public int total_trades { get; set; }
+        public int TotalTrades { get; set; }
 
         [JsonProperty("total_items_bazaarincome")]
-        public long total_items_bazaarincome { get; set; }
+        public long TotalBazaarIncome { get; set; }
 
         [JsonProperty("total_items_cityfinds")]
-        public int total_items_cityfinds { get; set; }
+        public int TotalItemsFoundInCity { get; set; }
 
         [JsonProperty("total_items_dumpfinds")]
-        public int total_items_dumpfinds { get; set; }
+        public int TotalItemsFoundInDump { get; set; }
 
         [JsonProperty("total_items_dumped")]
-        public int total_items_dumped { get; set; }
+        public int TotalItemsDumped { get; set; }
 
         [JsonProperty("total_jail_jailed")]
-        public int total_jail_jailed { get; set; }
+        public int TotalJailings { get; set; }
 
         [JsonProperty("total_jail_busted")]
-        public int total_jail_busted { get; set; }
+        public int TotalJailBusts { get; set; }
 
         [JsonProperty("total_jail_busts")]
-        public int total_jail_busts { get; set; }
+        public int TotalJailBustsFailed { get; set; }
 
         [JsonProperty("total_jail_bailed")]
-        public int total_jail_bailed { get; set; }
+        public int TotalJailBailings { get; set; }
 
         [JsonProperty("total_jail_bailcosts")]
-        public long total_jail_bailcosts { get; set; }
+        public long TotalJailBailCosts { get; set; }
 
         [JsonProperty("total_hospital_trips")]
-        public int total_hospital_trips { get; set; }
+        public int TotalHospitalizations { get; set; }
 
         [JsonProperty("total_hospital_medicalitemsused")]
-        public int total_hospital_medicalitemsused { get; set; }
+        public int TotalMedicalItemsUsed { get; set; }
 
         [JsonProperty("total_hospital_revived")]
-        public int total_hospital_revived { get; set; }
+        public int TotalRevives { get; set; }
 
         [JsonProperty("total_mails_sent")]
-        public int total_mails_sent { get; set; }
+        public int TotalMailsSent { get; set; }
 
         [JsonProperty("total_mails_sent_friends")]
-        public int total_mails_sent_friends { get; set; }
+        public int TotalMailsSentToFriends { get; set; }
 
         [JsonProperty("total_mails_sent_faction")]
-        public int total_mails_sent_faction { get; set; }
+        public int TotalMailsSentToFaction { get; set; }
 
         [JsonProperty("total_mails_sent_company")]
-        public int total_mails_sent_company { get; set; }
+        public int TotalMailsSentToCompany { get; set; }
 
         [JsonProperty("total_mails_sent_spouse")]
-        public int total_mails_sent_spouse { get; set; }
+        public int TotalMailsSentToSpouse { get; set; }
 
         [JsonProperty("total_classifiedads_placed")]
-        public int total_classifiedads_placed { get; set; }
+        public int TotalClassifiedAdsPlaced { get; set; }
 
         [JsonProperty("total_bounty_placed")]
-        public int total_bounty_placed { get; set; }
+        public int TotalBountiesPlaced { get; set; }
 
         [JsonProperty("total_bounty_rewards")]
-        public long total_bounty_rewards { get; set; }
+        public long TotalBountyRewards { get; set; }
 
         [JsonProperty("total_travel_all")]
-        public int total_travel_all { get; set; }
+        public int TotalTimesTraveled { get; set; }
 
         [JsonProperty("total_travel_argentina")]
-        public int total_travel_argentina { get; set; }
+        public int TotalTimesTraveledToArgentina { get; set; }
 
         [JsonProperty("total_travel_mexico")]
-        public int total_travel_mexico { get; set; }
+        public int TotalTimesTraveledToMexico { get; set; }
 
         [JsonProperty("total_travel_dubai")]
-        public int total_travel_dubai { get; set; }
+        public int TotalTimesTraveledToDubai { get; set; }
 
         [JsonProperty("total_travel_hawaii")]
-        public int total_travel_hawaii { get; set; }
+        public int TotalTimesTraveledToHawaii { get; set; }
 
         [JsonProperty("total_travel_japan")]
-        public int total_travel_japan { get; set; }
+        public int TotalTimesTraveledToJapan { get; set; }
 
         [JsonProperty("total_travel_unitedkingdom")]
-        public int total_travel_unitedkingdom { get; set; }
+        public int TotalTimesTraveledToUnitedKingdom { get; set; }
 
         [JsonProperty("total_travel_southafrica")]
-        public int total_travel_southafrica { get; set; }
+        public int TotalTimesTraveledToSouthAfrica { get; set; }
 
         [JsonProperty("total_travel_switzerland")]
-        public int total_travel_switzerland { get; set; }
+        public int TotalTimesTraveledToSwitzerland { get; set; }
 
         [JsonProperty("total_travel_china")]
-        public int total_travel_china { get; set; }
+        public int TotalTimesTraveledToChina { get; set; }
 
         [JsonProperty("total_travel_canada")]
-        public int total_travel_canada { get; set; }
+        public int TotalTimesTraveledToCanada { get; set; }
 
         [JsonProperty("total_travel_caymanislands")]
-        public int total_travel_caymanislands { get; set; }
+        public int TotalTimesTraveledToCaymanIslands { get; set; }
 
         [JsonProperty("total_drugs_used")]
-        public int total_drugs_used { get; set; }
+        public int TotalDrugsUsed { get; set; }
 
         [JsonProperty("total_drugs_overdosed")]
-        public int total_drugs_overdosed { get; set; }
+        public int TotalDrugOverdoses { get; set; }
 
         [JsonProperty("total_drugs_cannabis")]
-        public int total_drugs_cannabis { get; set; }
+        public int TotalCannabisUsed { get; set; }
 
         [JsonProperty("total_drugs_ecstacy")]
-        public int total_drugs_ecstacy { get; set; }
+        public int TotalEcstacyUsed { get; set; }
 
         [JsonProperty("total_drugs_ketamine")]
-        public int total_drugs_ketamine { get; set; }
+        public int TotalKetamineUsed { get; set; }
 
         [JsonProperty("total_drugs_lsd")]
-        public int total_drugs_lsd { get; set; }
+        public int TotalLsdUsed { get; set; }
 
         [JsonProperty("total_drugs_opium")]
-        public int total_drugs_opium { get; set; }
+        public int TotalOpiumUsed { get; set; }
 
         [JsonProperty("total_drugs_shrooms")]
-        public int total_drugs_shrooms { get; set; }
+        public int TotalShroomsUsed { get; set; }
 
         [JsonProperty("total_drugs_speed")]
-        public int total_drugs_speed { get; set; }
+        public int TotalSpeedUsed { get; set; }
 
         [JsonProperty("total_drugs_pcp")]
-        public int total_drugs_pcp { get; set; }
+        public int TotalPcpUsed { get; set; }
 
         [JsonProperty("total_drugs_xanax")]
-        public int total_drugs_xanax { get; set; }
+        public int TotalXanaxUsed { get; set; }
 
         [JsonProperty("total_drugs_vicodin")]
-        public int total_drugs_vicodin { get; set; }
+        public int TotalVicodinUsed { get; set; }
 
         [JsonProperty("total_merits_bought")]
-        public int total_merits_bought { get; set; }
+        public int TotalMeritsBought { get; set; }
 
         [JsonProperty("total_refills_bought")]
-        public int total_refills_bought { get; set; }
+        public int TotalRefillsBought { get; set; }
 
         [JsonProperty("total_company_trains")]
-        public int total_company_trains { get; set; }
+        public int TotalCompanyTrainsDone { get; set; }
 
         [JsonProperty("total_statenhancers_used")]
-        public int total_statenhancers_used { get; set; }
+        public int TotalStatEnhancersUsed { get; set; }
     }
 }

@@ -26,13 +26,57 @@
     using Contract.User;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Defines methods to be implemented by a class which can query for game data
+    /// </summary>
     public interface ITornHttpProxy
     {
+        /// <summary>
+        /// Gets data related to player run companies
+        /// </summary>
+        /// <param name="companyId">The Id of the company to query. Can be string.Empty for self querying against the current user api key</param>
+        /// <param name="fields">The data to be retrieved as see in the api docs</param>
+        /// <returns>Return a property bag object populated with the data fields specified</returns>
         Task<CompanyPropertyBag> GetCompanyPropertiesAsync(string companyId, params CompanyField[] fields);
+
+        /// <summary>
+        /// Gets data related to a faction
+        /// </summary>
+        /// <param name="factionId">The Id for the faction to query. Can be string.Empty for self querying against the current user api key</param>
+        /// <param name="fields">The data to be retrieved as see in the api docs</param>
+        /// <returns>Return a property bag object populated with the data fields specified</returns>
         Task<FactionPropertyBag> GetFactionPropertiesAsync(string factionId, params FactionField[] fields);
-        Task<ItemMarketPropertyBag> GetItemMarketListings(string itemId, params ItemField[] fields);
+
+        /// <summary>
+        /// Gets data related to items on the item market
+        /// </summary>
+        /// <param name="itemId">The Id of the item type to query. If left blank defaults to 1</param>
+        /// <param name="fields">The data to be retrieved as see in the api docs</param>
+        /// <returns>Return a property bag object populated with the data fields specified</returns>
+        Task<ItemMarketPropertyBag> GetItemMarketListingsAsync(string itemId, params ItemField[] fields);
+
+        /// <summary>
+        /// Gets data related to a property
+        /// </summary>
+        /// <param name="propertyId">The Id of the property to query.</param>
+        /// <param name="fields">The data to be retrieved as see in the api docs</param>
+        /// <returns>Return a property bag object populated with the data fields specified</returns>
         Task<PropertyPropertyBag> GetPropertyPropertiesAsync(string propertyId, params PropertyField[] fields);
+
+        /// <summary>
+        /// Gets data related to game objects such as medals, honors, items, etc.
+        /// </summary>
+        /// <param name="id">Can be speicified when querying for a particular item or string.Empty</param>
+        /// <param name="fields">The data to be retrieved as see in the api docs</param>
+        /// <returns>Return a property bag object populated with the data fields specified</returns>
         Task<TornPropertyBag> GetTornPropertiesAsync(string id, params TornField[] fields);
-        Task<UserPropertyBag> GetUserProperties(string userId, params UserField[] fields);
+
+        /// <summary>
+        /// Gets data related to a player
+        /// </summary>
+        /// <param name="userId">The Id of the user to query. Can be set to string.Empty to query against the api key owner</param>
+        /// <param name="fields">The data to be retrieved as see in the api docs</param>
+        /// <returns>Return a property bag object populated with the data fields specified</returns>
+        Task<UserPropertyBag> GetUserPropertiesAsync(string userId, params UserField[] fields);
     }
 }
