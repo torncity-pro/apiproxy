@@ -40,7 +40,7 @@
         public string WeaponType { get; set; }
 
         [JsonProperty("buy_price")]
-        public int BuyPrice { get; set; }
+        public long BuyPrice { get; set; }
 
         [JsonProperty("sell_price")]
         public int SellPrice { get; set; }
