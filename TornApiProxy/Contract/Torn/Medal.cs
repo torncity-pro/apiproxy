@@ -29,7 +29,7 @@
         public string Description { get; set; }
 
         [JsonProperty("type")]
-        public int Type { get; set; }
+        public string Type { get; set; }
 
         [JsonProperty("circulation")]
         public int Circulation { get; set; }
