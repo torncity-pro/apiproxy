@@ -30,5 +30,11 @@
 
         [JsonProperty("type")]
         public int Type { get; set; }
+
+        [JsonProperty("circulation")]
+        public int Circulation { get; set; }
+
+        [JsonProperty("rarity")]
+        public string Rarity { get; set; }
     }
 }
