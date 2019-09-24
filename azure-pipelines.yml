@@ -24,6 +24,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: DotNetCoreInstaller@0
+  displayName: 'Install .net core 3.0'
+  inputs:
+    version: '3.0.0'
+
 - task: DotNetCoreCLI@2
   displayName: 'Build'
   inputs:
