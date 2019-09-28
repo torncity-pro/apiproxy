@@ -19,10 +19,17 @@
 ﻿namespace TornApiProxy.Contract.Properties
 {
     using Shared;
+
+    /// <summary>
+    /// The class which holds all the queryable fields for the properties endpoint
+    /// </summary>
     public class PropertyField : ApiField
     {
         protected PropertyField(string fieldName) : base(fieldName) { }
 
+        /// <summary>
+        /// Properties only has one selection aside from timestamp "property"
+        /// </summary>
         public static readonly PropertyField Property = new PropertyField("property");
     }
 }

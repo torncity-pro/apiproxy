@@ -18,14 +18,28 @@
 
 ﻿namespace TornApiProxy.Contract.Shared
 {
+    /// <summary>
+    /// Meant to be inherited to specify string value constants to give to the selection field in the api
+    /// </summary>
     public class ApiField
     {
+        /// <summary>
+        /// Protected constructor for the inheriting classes to use
+        /// </summary>
+        /// <param name="fieldName"></param>
         protected ApiField(string fieldName)
         {
             this.fieldName = fieldName;
         }
 
+        /// <summary>
+        /// The string representation of the field to query
+        /// </summary>
         public readonly string fieldName;
+
+        /// <summary>
+        /// Queries the api for the timestamp
+        /// </summary>
         public static readonly ApiField Timestamp = new ApiField("timestamp");
     }
 }
