@@ -23,60 +23,60 @@
     public class NetworthData
     {
         [JsonProperty("pending")]
-        public double Pending { get; set; }
+        public long Pending { get; set; }
 
         [JsonProperty("wallet")]
-        public double Wallet { get; set; }
+        public long Wallet { get; set; }
 
         [JsonProperty("bank")]
-        public double Bank { get; set; }
+        public long Bank { get; set; }
 
         [JsonProperty("points")]
-        public double Points { get; set; }
+        public long Points { get; set; }
 
         [JsonProperty("cayman")]
-        public double Cayman { get; set; }
+        public long Cayman { get; set; }
 
         [JsonProperty("vault")]
-        public double Vault { get; set; }
+        public long Vault { get; set; }
 
         [JsonProperty("piggybank")]
-        public double? PiggyBank { get; set; }
+        public long? PiggyBank { get; set; }
 
         [JsonProperty("items")]
-        public double Items { get; set; }
+        public long Items { get; set; }
 
         [JsonProperty("displaycase")]
-        public double DisplayCase { get; set; }
+        public long DisplayCase { get; set; }
 
         [JsonProperty("bazaar")]
-        public double Bazaar { get; set; }
+        public long Bazaar { get; set; }
 
         [JsonProperty("properties")]
-        public double Properties { get; set; }
+        public long Properties { get; set; }
 
         [JsonProperty("stockmarket")]
-        public double StockMarket { get; set; }
+        public long StockMarket { get; set; }
 
         [JsonProperty("auctionhouse")]
-        public double AuctionHouse { get; set; }
+        public long AuctionHouse { get; set; }
 
         [JsonProperty("company")]
-        public double Company { get; set; }
+        public long Company { get; set; }
 
         [JsonProperty("bookie")]
-        public double Bookie { get; set; }
+        public long Bookie { get; set; }
 
         [JsonProperty("loan")]
-        public double Loan { get; set; }
+        public long Loan { get; set; }
 
         [JsonProperty("unpaidfees")]
-        public double UnpaidFees { get; set; }
+        public long UnpaidFees { get; set; }
 
         [JsonProperty("total")]
-        public double Total { get; set; }
+        public long Total { get; set; }
 
         [JsonProperty("parsetime")]
-        public double ParseTime { get; set; }
+        public long ParseTime { get; set; }
     }
 }
