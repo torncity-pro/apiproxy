@@ -20,44 +20,86 @@
 {
     using Newtonsoft.Json;
 
+    /// <summary>
+    /// Detailed company profile
+    /// </summary>
     public class CompanyDetailed
     {
+        /// <summary>
+        /// The company id
+        /// </summary>
         [JsonProperty("ID")]
         public int CompanyId { get; set; }
 
+        /// <summary>
+        /// The amount of money in the company bank
+        /// </summary>
         [JsonProperty("company_bank")]
-        public int CompanyBank { get; set; }
+        public long CompanyBank { get; set; }
 
+        /// <summary>
+        /// The % popularity of the company
+        /// </summary>
         [JsonProperty("popularity")]
-        public int Popularity { get; set; }
+        public short Popularity { get; set; }
 
+        /// <summary>
+        /// The % effeciency of the company
+        /// </summary>
         [JsonProperty("efficiency")]
-        public int Efficiency { get; set; }
+        public short Efficiency { get; set; }
 
+        /// <summary>
+        /// The % cleanliness of the company
+        /// </summary>
         [JsonProperty("environment")]
-        public int Environment { get; set; }
+        public short Environment { get; set; }
 
+        /// <summary>
+        /// The number of trains the company has (20 max)
+        /// </summary>
         [JsonProperty("trains_available")]
-        public int TrainsAvailable { get; set; }
+        public short TrainsAvailable { get; set; }
 
+        /// <summary>
+        /// The amount of money spent daily on advertising
+        /// </summary>
         [JsonProperty("advertising_budget")]
         public int AdvertisingBudget { get; set; }
 
+        /// <summary>
+        /// The object which has the company upgrades that have been purchased
+        /// </summary>
         [JsonProperty("upgrades")]
         public CompanyUpgrades Upgrades { get; set; }
     }
 
+    /// <summary>
+    /// A class to hold the company upgrades
+    /// </summary>
     public class CompanyUpgrades
     {
+        /// <summary>
+        /// The size of the company
+        /// </summary>
         [JsonProperty("company_size")]
         public byte CompanySize { get; set; }
 
+        /// <summary>
+        /// The current size of the staff room
+        /// </summary>
         [JsonProperty("staffroom_size")]
         public string StaffroomSize { get; set; }
 
+        /// <summary>
+        /// The string representation  of the storeroom size for products the company sells
+        /// </summary>
         [JsonProperty("storage_size")]
         public string StorageSize { get; set; }
 
+        /// <summary>
+        /// The amount of products the company can store
+        /// </summary>
         [JsonProperty("storage_space")]
         public int StorageSpace { get; set; }
     }
