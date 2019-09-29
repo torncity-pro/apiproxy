@@ -74,22 +74,22 @@
         /// <returns>The concrete exception class for the specific error</returns>
         public static ApiException CreateExceptionFromExceptionInfo(ExceptionInfo ex)
         {
-            switch (ex.ErrorCode)
+            return ex.ErrorCode switch
             {
-                case 1: return new EmptyApiKeyException(ex);
-                case 2: return new IncorrectApiKeyException(ex);
-                case 3: return new WrongTypeException(ex);
-                case 4: return new WrongFieldException(ex);
-                case 5: return new TooManyRequestsException(ex);
-                case 6: return new IncorrectIdException(ex);
-                case 7: return new IncorrectIdEntityRelationException(ex);
-                case 8: return new BlockedIpException(ex);
-                case 9: return new ApiDisabledException(ex);
-                case 10: return new PlayerBannedException(ex);
-                case 11: return new ApiKeyChangeException(ex);
-                case 12: return new ApiKeyReadException(ex);
-                default: return new UnknownException(ex);
-            }
+                1 => new EmptyApiKeyException(ex),
+                2 => new IncorrectApiKeyException(ex),
+                3 => new WrongTypeException(ex),
+                4 => new WrongFieldException(ex),
+                5 => new TooManyRequestsException(ex),
+                6 => new IncorrectIdException(ex),
+                7 => new IncorrectIdEntityRelationException(ex),
+                8 => new BlockedIpException(ex),
+                9 => new ApiDisabledException(ex),
+                10 => new PlayerBannedException(ex),
+                11 => new ApiKeyChangeException(ex),
+                12 => new ApiKeyReadException(ex),
+                _ => new UnknownException(ex),
+            };
         }
     }
 }
