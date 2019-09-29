@@ -22,14 +22,26 @@
     using Shared;
     using System.Collections.Generic;
 
+    /// <summary>
+    /// A root level object to hold all the object values returned by the api
+    /// </summary>
     public class ItemMarketPropertyBag : PropertyBagBase
     {
+        /// <summary>
+        /// A dictionary of points for sale on the market
+        /// </summary>
         [JsonProperty("pointsmarket")]
         public Dictionary<string, PointsListing> PointsMarket { get; set; }
 
+        /// <summary>
+        /// A dictionary of the item for sale in bazaars
+        /// </summary>
         [JsonProperty("bazaar")]
         public Dictionary<string, MarketListing> Bazaars { get; set; }
 
+        /// <summary>
+        /// A dictionary of the item for sale on the item market
+        /// </summary>
         [JsonProperty("itemmarket")]
         public Dictionary<string, MarketListing> ItemMarket { get; set; }
     }

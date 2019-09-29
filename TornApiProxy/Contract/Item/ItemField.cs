@@ -20,6 +20,9 @@
 {
     using Shared;
 
+    /// <summary>
+    /// Strings that can be queried from the API
+    /// </summary>
     public class ItemField : ApiField
     {
         protected ItemField(string fieldName) : base(fieldName) { }
