@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/torncity-pro/apiproxy.svg?branch=master)](https://travis-ci.org/torncity-pro/apiproxy)
 # Introduction 
 This project aims to create a C# interface to the Torn.com API.
 
