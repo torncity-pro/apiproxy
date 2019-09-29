@@ -78,7 +78,7 @@
         public int AvailableShares { get; set; }
 
         [JsonProperty("current_shares")]
-        public object CurrentShares { get; set; }
+        public long CurrentShares { get; set; }
     }
 
     public class BenefitBlock
