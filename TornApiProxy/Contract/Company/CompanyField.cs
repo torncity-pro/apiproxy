@@ -19,6 +19,10 @@
 ﻿namespace TornApiProxy.Contract.Company
 {
     using Shared;
+
+    /// <summary>
+    /// Company fields that can be queried
+    /// </summary>
     public class CompanyField : ApiField
     {
         protected CompanyField(string fieldName) : base(fieldName) { }
