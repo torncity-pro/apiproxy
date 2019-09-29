@@ -23,48 +23,93 @@
 
     public class Company
     {
+        /// <summary>
+        /// The id that represents this company in url lookups
+        /// </summary>
         [JsonProperty("ID")]
         public int CompanyId { get; set; }
 
+        /// <summary>
+        /// The type of company
+        /// </summary>
         [JsonProperty("company_type")]
         public int CompanyType { get; set; }
 
+        /// <summary>
+        /// The star rating out of 10 for the company
+        /// </summary>
         [JsonProperty("rating")]
         public int Rating { get; set; }
 
+        /// <summary>
+        /// The name of the company
+        /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The id of the player who runs the company
+        /// </summary>
         [JsonProperty("director")]
         public int Director { get; set; }
 
+        /// <summary>
+        /// The daily profit the company earns
+        /// </summary>
         [JsonProperty("daily_profit")]
-        public int DailyProfit { get; set; }
+        public long DailyProfit { get; set; }
 
+        /// <summary>
+        /// The weekly profits the company earns
+        /// </summary>
         [JsonProperty("weekly_profit")]
-        public int WeeklyProfit { get; set; }
+        public long WeeklyProfit { get; set; }
 
+        /// <summary>
+        /// The number of daily customers
+        /// </summary>
         [JsonProperty("daily_customers")]
         public int DailyCustomers { get; set; }
 
+        /// <summary>
+        /// The number of weekly customers
+        /// </summary>
         [JsonProperty("weekly_customers")]
         public int WeeklyCustomers { get; set; }
 
+        /// <summary>
+        /// How old the company is
+        /// </summary>
         [JsonProperty("days_old")]
         public int DaysOld { get; set; }
 
+        /// <summary>
+        /// A dictionary of employees in the company
+        /// </summary>
         [JsonProperty("employees")]
         public Dictionary<string, Employee> Employees { get; set; }
     }
 
+    /// <summary>
+    /// An employee in the company
+    /// </summary>
     public class Employee
     {
+        /// <summary>
+        /// The name of the employee
+        /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        /// <summary>
+        /// The name of the position the employee has
+        /// </summary>
         [JsonProperty("position")]
         public string Position { get; set; }
 
+        /// <summary>
+        /// The number of days the employee has been with the company
+        /// </summary>
         [JsonProperty("days_in_company")]
         public int DaysInCompany { get; set; }
     }
