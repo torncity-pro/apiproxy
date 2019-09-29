@@ -20,27 +20,51 @@
 {
     using Newtonsoft.Json;
     
+    /// <summary>
+    /// A company employee
+    /// </summary>
     public class CompanyEmployee
     {
+        /// <summary>
+        /// The position of the employee
+        /// </summary>
         [JsonProperty("position")]
         public string Position { get; set; }
 
+        /// <summary>
+        /// The number of days the employee has been with the company
+        /// </summary>
         [JsonProperty("days_employed")]
-        public ushort DaysEmployed { get; set; }
+        public short DaysEmployed { get; set; }
 
+        /// <summary>
+        /// The employees wage $25,000,000 max
+        /// </summary>
         [JsonProperty("wage")]
-        public uint Wage { get; set; }
+        public int Wage { get; set; }
 
+        /// <summary>
+        /// The employees effectiveness out of 5
+        /// </summary>
         [JsonProperty("effectiveness")]
         public byte Effectiveness { get; set; }
 
+        /// <summary>
+        /// The employees manual labor stat
+        /// </summary>
         [JsonProperty("manual_labor")]
-        public uint Manual_labor { get; set; }
+        public int Manual_labor { get; set; }
 
+        /// <summary>
+        /// The employees intelligence stat
+        /// </summary>
         [JsonProperty("intelligence")]
-        public uint Intelligence { get; set; }
+        public int Intelligence { get; set; }
 
+        /// <summary>
+        /// The employees endurace stat
+        /// </summary>
         [JsonProperty("endurance")]
-        public uint Endurance { get; set; }
+        public int Endurance { get; set; }
     }
 }
