@@ -32,65 +32,138 @@
     using System.Net.Http;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// An implementation of the ITornHttpProxy
+    /// </summary>
     public class TornHttpProxy : ITornHttpProxy
     {
-        private string apiKey;
-        private HttpClient httpClient;
+        /// <summary>
+        /// The apiKey to use for http requests made by this proxy
+        /// </summary>
+        private readonly string apiKey;
 
-        public const string COMPANY = "company";
-        public const string FACTION = "faction";
-        public const string ITEM = "market";
-        public const string PROPERTY = "property";
-        public const string TORN = "torn";
-        public const string USER = "user";
+        /// <summary>
+        /// The HttpClient to use when making web requests
+        /// </summary>
+        private readonly HttpClient httpClient;
 
-        public TornHttpProxy()
+        #region url constants
+        private const string COMPANY = "company";
+        private const string FACTION = "faction";
+        private const string ITEM = "market";
+        private const string PROPERTY = "property";
+        private const string TORN = "torn";
+        private const string USER = "user";
+        #endregion
+
+        /// <summary>
+        /// Creates a new TornHttpProxy
+        /// </summary>
+        /// <param name="httpClient">The HttpClient this proxy should use</param>
+        /// <param name="apiKey">The apiKey to be used</param>
+        public TornHttpProxy(HttpClient httpClient, string apiKey) : this(apiKey)
         {
+            this.httpClient = httpClient;
+        }
+
+        /// <summary>
+        /// Creates a TornHttpProxy
+        /// </summary>
+        /// <param name="apiKey">The apiKey to be used</param>
+        public TornHttpProxy(string apiKey)
+        {
+            this.apiKey = apiKey;
             this.httpClient = new HttpClient()
             {
                 BaseAddress = new Uri("https://api.torn.com/")
             };
         }
 
-        public TornHttpProxy(string apiKey) : this()
-        {
-            this.apiKey = apiKey;
-        }
-
+        /// <summary>
+        /// Provides a nice wrapper for the api.torn.com/user/ endpoint
+        /// </summary>
+        /// <param name="id">The id to query</param>
+        /// <param name="fields">The fields to query</param>
+        /// <returns>A new propertybag with the given fields deserialized into it</returns>
         public async Task<UserPropertyBag> GetUserPropertiesAsync(string userId, params UserField[] fields)
         {
             return await this.GetPropertiesAsync<UserPropertyBag>(USER, userId, fields).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Provides a nice wrapper for the api.torn.com/market/ endpoint
+        /// </summary>
+        /// <param name="id">The id to query</param>
+        /// <param name="fields">The fields to query</param>
+        /// <returns>A new propertybag with the given fields deserialized into it</returns>
         public async Task<ItemMarketPropertyBag> GetItemMarketListingsAsync(string itemId, params ItemField[] fields)
         {
             return await this.GetPropertiesAsync<ItemMarketPropertyBag>(ITEM, itemId, fields).ConfigureAwait(false);
         }
+
+        /// <summary>
+        /// Provides a nice wrapper for the api.torn.com/company/ endpoint
+        /// </summary>
+        /// <param name="id">The id to query</param>
+        /// <param name="fields">The fields to query</param>
+        /// <returns>A new propertybag with the given fields deserialized into it</returns>
         public async Task<CompanyPropertyBag> GetCompanyPropertiesAsync(string companyId, params CompanyField[] fields)
         {
             return await this.GetPropertiesAsync<CompanyPropertyBag>(COMPANY, companyId, fields).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Provides a nice wrapper for the api.torn.com/property/ endpoint
+        /// </summary>
+        /// <param name="id">The id to query</param>
+        /// <param name="fields">The fields to query</param>
+        /// <returns>A new propertybag with the given fields deserialized into it</returns>
         public async Task<PropertyPropertyBag> GetPropertyPropertiesAsync(string propertyId, params PropertyField[] fields)
         {
             return await this.GetPropertiesAsync<PropertyPropertyBag>(PROPERTY, propertyId, fields).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Provides a nice wrapper for the api.torn.com/faction/ endpoint
+        /// </summary>
+        /// <param name="id">The id to query</param>
+        /// <param name="fields">The fields to query</param>
+        /// <returns>A new propertybag with the given fields deserialized into it</returns>
         public async Task<FactionPropertyBag> GetFactionPropertiesAsync(string factionId, params FactionField[] fields)
         {
             return await this.GetPropertiesAsync<FactionPropertyBag>(FACTION, factionId, fields).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Provides a nice wrapper for the api.torn.com/torn/ endpoint
+        /// </summary>
+        /// <param name="id">The id to query</param>
+        /// <param name="fields">The fields to query</param>
+        /// <returns>A new propertybag with the given fields deserialized into it</returns>
         public async Task<TornPropertyBag> GetTornPropertiesAsync(string id, params TornField[] fields)
         {
             return await this.GetPropertiesAsync<TornPropertyBag>(TORN, id, fields).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Query the given url with the provided parameters and then deserializes it to return object T
+        /// </summary>
+        /// <typeparam name="T">The Object to deserialize</typeparam>
+        /// <param name="resourceName">The url endpoint to query</param>
+        /// <param name="id">The id of the resource to query, can sometimes be string.Empty</param>
+        /// <param name="fields">The ApiFields to query.</param>
+        /// <returns>A newly populated object T</returns>
         private async Task<T> GetPropertiesAsync<T>(string resourceName, string id, params ApiField[] fields) where T : PropertyBagBase
         {
             return await this.GetResourceAsync<T>(string.Format("{0}/{1}?key={2}&selections={3}", resourceName, id, this.apiKey, string.Join(",", fields.Select(i => i.fieldName)))).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Gets the json response from the api endpoint and deserializes to the given type T
+        /// </summary>
+        /// <typeparam name="T">The type to deserialize</typeparam>
+        /// <param name="resource">The web url to query</param>
+        /// <returns>A new data object will be returned on success or an error will be thrown</returns>
         private async Task<T> GetResourceAsync<T>(string resource) where T : PropertyBagBase
         {
             var request = new HttpRequestMessage(HttpMethod.Get, resource);
@@ -109,7 +182,7 @@
                 return payload;
             }
 
-            return default(T);
+            return default;
         }
     }
 }

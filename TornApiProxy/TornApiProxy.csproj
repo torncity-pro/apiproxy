@@ -24,7 +24,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression></PackageLicenseExpression>
     <Copyright>2019</Copyright>
-    <Version>2.1.1</Version>
+    <Version>2.2.0</Version>
     <PackageId>TornCityDotNet</PackageId>
     <Authors>Anonymous</Authors>
     <Company>toncity.pro</Company>
