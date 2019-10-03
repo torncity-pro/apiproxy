@@ -261,8 +261,8 @@
         [JsonProperty("faction_perks")]
         public List<string> FactionPerks { get; set; }
 
-        [JsonProperty("book_perks")] // Is this the correct value?
-        public List<string> BookPerks { get; set; }
+        //[JsonProperty("book_perks")] // Is this the correct value?
+        //public List<string> BookPerks { get; set; }
 
         [JsonProperty("mesages")]
         public Dictionary<string, Message> Messages { get; set; }
