@@ -53,7 +53,7 @@
         /// The employees manual labor stat
         /// </summary>
         [JsonProperty("manual_labor")]
-        public int Manual_labor { get; set; }
+        public int ManualLabor { get; set; }
 
         /// <summary>
         /// The employees intelligence stat
