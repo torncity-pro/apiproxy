@@ -25,8 +25,8 @@
     {
         protected ItemField(string fieldName) : base(fieldName) { }
 
-        public static readonly ItemField Networth = new ItemField("itemmarket");
+        public static readonly ItemField ItemMarket = new ItemField("itemmarket");
         public static readonly ItemField Bazaar = new ItemField("bazaar");
-        public static readonly ItemField Display = new ItemField("pointsmarket");
+        public static readonly ItemField PointsMarket = new ItemField("pointsmarket");
     }
 }
