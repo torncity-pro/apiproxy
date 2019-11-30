@@ -16,7 +16,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy
+namespace TornApiProxy
 {
     using Contract.Company;
     using Contract.Faction;
@@ -24,6 +24,7 @@
     using Contract.Properties;
     using Contract.Torn;
     using Contract.User;
+    using Fields;
     using System.Threading.Tasks;
 
     /// <summary>

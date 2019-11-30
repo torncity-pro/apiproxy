@@ -16,10 +16,8 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy.Contract.Company
+﻿namespace TornApiProxy.Fields
 {
-    using Shared;
-
     /// <summary>
     /// Company fields that can be queried
     /// </summary>

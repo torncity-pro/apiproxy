@@ -16,10 +16,8 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy.Contract.Properties
+﻿namespace TornApiProxy.Fields
 {
-    using Shared;
-
     /// <summary>
     /// The class which holds all the queryable fields for the properties endpoint
     /// </summary>

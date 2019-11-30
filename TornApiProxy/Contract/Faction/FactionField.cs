@@ -16,10 +16,8 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy.Contract.Faction
+﻿namespace TornApiProxy.Fields
 {
-    using Shared;
-
     public class FactionField : ApiField
     {
         protected FactionField(string fieldName) : base(fieldName) { }

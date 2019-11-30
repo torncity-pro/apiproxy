@@ -16,9 +16,8 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy.Contract.User
+﻿namespace TornApiProxy.Fields
 {
-    using Shared;
     public class UserField : ApiField
     {
         protected UserField(string fieldName) : base(fieldName) { }

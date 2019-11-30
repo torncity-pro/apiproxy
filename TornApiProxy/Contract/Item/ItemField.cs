@@ -16,10 +16,8 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy.Contract.Item
+﻿namespace TornApiProxy.Fields
 {
-    using Shared;
-
     /// <summary>
     /// Strings that can be queried from the API
     /// </summary>
