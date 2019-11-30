@@ -30,7 +30,7 @@
         public string CrimeName { get; set; }
 
         [JsonProperty("participants")]
-        public Dictionary<string, List<string>> Participants { get; set; }
+        public List<Dictionary<string, List<string>>> Participants { get; set; }
 
         [JsonProperty("time_started")]
         public int TimeStarted { get; set; }
