@@ -22,6 +22,7 @@
     {
         protected TornField(string fieldName) : base(fieldName) { }
 
+        public static readonly TornField BankRates = new TornField("bank");
         public static readonly TornField Items = new TornField("items");
         public static readonly TornField Medals = new TornField("medals");
         public static readonly TornField Honors = new TornField("honors");

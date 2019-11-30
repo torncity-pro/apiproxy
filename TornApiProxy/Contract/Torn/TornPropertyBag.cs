@@ -62,5 +62,8 @@
 
         [JsonProperty("rackets")]
         public Dictionary<string, Racket> Rackets { get; set; }
+
+        [JsonProperty("bank")]
+        public BankRates BankRates { get; set; }
     }
 }
