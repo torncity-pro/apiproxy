@@ -1,4 +1,4 @@
-/***********************************************************************
+﻿/***********************************************************************
   This project provides a C# interface to the Torn.com API.
   Copyright (C) 2019  TornCityPro
   
@@ -16,24 +16,25 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy.Contract.Faction
+namespace TornApiProxy.Contract.User
 {
     using Newtonsoft.Json;
-    using System.Collections.Generic;
 
-    public class FactionMember
+    public class Status
     {
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; set; }
+		
+        [JsonProperty("details")]
+        public string Details { get; set; }
+        
+        [JsonProperty("state")]
+        public string State { get; set; }
+        
+        [JsonProperty("color")]
+        public string Color { get; set; }
 
-        [JsonProperty("days_in_faction")]
-        public int DaysInFaction { get; set; }
-
-        [JsonProperty("last_action")]
-        public string LastAction { get; set; }
-
-        // TODO: Find out if this one is still valid
-        [JsonProperty("status")]
-        public List<string> Status { get; set; }
+        [JsonProperty("until")]
+        public int Until { get; set; }
     }
 }

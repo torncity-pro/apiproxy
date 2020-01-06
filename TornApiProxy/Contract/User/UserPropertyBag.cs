@@ -37,7 +37,7 @@
         public string Name { get; set; }
 
         [JsonProperty("status")]
-        public List<string> Status { get; set; }
+        public Status Status { get; set; }
 
         [JsonProperty("strength")]
         public string Strength { get; set; }
