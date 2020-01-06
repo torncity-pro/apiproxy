@@ -20,6 +20,7 @@
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
+    using Shared;
 
     public class FactionMember
     {
@@ -30,10 +31,9 @@
         public int DaysInFaction { get; set; }
 
         [JsonProperty("last_action")]
-        public string LastAction { get; set; }
+        public LastAction LastAction { get; set; }
 
-        // TODO: Find out if this one is still valid
         [JsonProperty("status")]
-        public List<string> Status { get; set; }
+        public Status Status { get; set; }
     }
 }

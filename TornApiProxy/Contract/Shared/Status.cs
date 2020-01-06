@@ -16,7 +16,7 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-namespace TornApiProxy.Contract.User
+namespace TornApiProxy.Contract.Shared
 {
     using Newtonsoft.Json;
 
