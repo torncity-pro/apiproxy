@@ -19,6 +19,7 @@
 ﻿namespace TornApiProxy.Contract.Company
 {
     using Newtonsoft.Json;
+    using Shared;
     using System.Collections.Generic;
 
     public class Company
@@ -112,5 +113,17 @@
         /// </summary>
         [JsonProperty("days_in_company")]
         public int DaysInCompany { get; set; }
+
+        /// <summary>
+        /// Gets or sets the last action of the player
+        /// </summary>
+        [JsonProperty("last_action")]
+        public LastAction LastAction { get; set; }
+
+        /// <summary>
+        /// Gets or sets the status of the player
+        /// </summary>
+        [JsonProperty("status")]
+        public Status Status { get; set; }
     }
 }
