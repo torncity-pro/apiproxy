@@ -26,7 +26,7 @@
         public static readonly UserField Bazaar = new UserField("bazaar");
         public static readonly UserField Display = new UserField("display");
         public static readonly UserField Inventory = new UserField("inventory");
-        public static readonly UserField Hof = new UserField("hof");
+        public static readonly UserField HallOfFame = new UserField("hof");
         public static readonly UserField Travel = new UserField("travel");
         public static readonly UserField Events = new UserField("events");
         public static readonly UserField Messages = new UserField("messages");
