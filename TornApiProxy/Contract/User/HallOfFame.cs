@@ -23,10 +23,10 @@
     public class HallOfFameEntry
     {
         [JsonProperty("value")]
-        public int Value { get; set; }
+        public long Value { get; set; }
 
         [JsonProperty("rank")]
-        public int Rank { get; set; }
+        public long Rank { get; set; }
     }
 
     public class HallOfFame
