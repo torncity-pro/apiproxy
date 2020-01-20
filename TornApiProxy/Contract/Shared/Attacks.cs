@@ -29,10 +29,10 @@
         public int TimestampEnded { get; set; }
 
         [JsonProperty("attacker_id")]
-        public int AttackerId { get; set; }
+        public string AttackerId { get; set; }
 
         [JsonProperty("attacker_faction")]
-        public int AttackerFaction { get; set; }
+        public string AttackerFaction { get; set; }
 
         [JsonProperty("defender_id")]
         public int DefenderId { get; set; }
@@ -74,21 +74,21 @@
     public class AttackModifiers
     {
         [JsonProperty("fairFight")]
-        public int FairFight { get; set; }
+        public float FairFight { get; set; }
 
         [JsonProperty("war")]
-        public int War { get; set; }
+        public float War { get; set; }
 
         [JsonProperty("retaliation")]
-        public int Retaliation { get; set; }
+        public float Retaliation { get; set; }
 
         [JsonProperty("groupAttack")]
-        public int GroupAttack { get; set; }
+        public float GroupAttack { get; set; }
 
         [JsonProperty("overseas")]
-        public int Overseas { get; set; }
+        public float Overseas { get; set; }
 
         [JsonProperty("chainBonus")]
-        public int ChainBonus { get; set; }
+        public float ChainBonus { get; set; }
     }
 }

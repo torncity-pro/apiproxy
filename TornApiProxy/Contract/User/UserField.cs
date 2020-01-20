@@ -22,7 +22,7 @@
     {
         protected UserField(string fieldName) : base(fieldName) { }
 
-        public static readonly UserField Networth = new UserField("networth");
+        public static readonly UserField Networth = new UserField("money,networth");
         public static readonly UserField Bazaar = new UserField("bazaar");
         public static readonly UserField Display = new UserField("display");
         public static readonly UserField Inventory = new UserField("inventory");
@@ -39,7 +39,7 @@
         public static readonly UserField Crimes = new UserField("crimes");
         public static readonly UserField Icons = new UserField("icons");
         public static readonly UserField Cooldowns = new UserField("cooldowns");
-        public static readonly UserField Money = new UserField("money");
+        public static readonly UserField Money = new UserField("money,networth");
         public static readonly UserField Perks = new UserField("perks");
         public static readonly UserField Battlestats = new UserField("battlestats");
         public static readonly UserField Bars = new UserField("bars");
