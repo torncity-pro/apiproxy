@@ -37,12 +37,12 @@
         /// A dictionary of the item for sale in bazaars
         /// </summary>
         [JsonProperty("bazaar")]
-        public Dictionary<string, MarketListing> Bazaars { get; set; }
+        public List<MarketListing> Bazaars { get; set; }
 
         /// <summary>
         /// A dictionary of the item for sale on the item market
         /// </summary>
         [JsonProperty("itemmarket")]
-        public Dictionary<string, MarketListing> ItemMarket { get; set; }
+        public List<MarketListing> ItemMarket { get; set; }
     }
 }
