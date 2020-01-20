@@ -35,16 +35,16 @@
         public int Energy { get; set; }
 
         [JsonProperty("strength")]
-        public int Strength { get; set; }
+        public float Strength { get; set; }
 
         [JsonProperty("speed")]
-        public int Speed { get; set; }
+        public float Speed { get; set; }
 
         [JsonProperty("defense")]
-        public int Defense { get; set; }
+        public float Defense { get; set; }
 
         [JsonProperty("dexterity")]
-        public int Dexterity { get; set; }
+        public float Dexterity { get; set; }
 
         [JsonProperty("note")]
         public string Note { get; set; }

@@ -45,7 +45,7 @@
         public long TotalShares { get; set; }
 
         [JsonProperty("available_shares")]
-        public int AvailableShares { get; set; }
+        public long AvailableShares { get; set; }
 
         [JsonProperty("forecast")]
         public string Forecast { get; set; }
@@ -75,7 +75,7 @@
         public string Change { get; set; }
 
         [JsonProperty("available_shares")]
-        public int AvailableShares { get; set; }
+        public long AvailableShares { get; set; }
 
         [JsonProperty("current_shares")]
         public long CurrentShares { get; set; }

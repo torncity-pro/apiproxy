@@ -27,7 +27,7 @@
         public string Name { get; set; }
 
         [JsonProperty("cost")]
-        public int Cost { get; set; }
+        public string Cost { get; set; }
 
         [JsonProperty("happy")]
         public int Happy { get; set; }
