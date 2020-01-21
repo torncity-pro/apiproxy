@@ -19,8 +19,9 @@
 ﻿namespace TornApiProxy.Contract.User
 {
     using Newtonsoft.Json;
+    using Shared;
 
-    public class Event
+    public class Event : ApiListItem
     {
         [JsonProperty("timestamp")]
         public int Timestamp { get; set; }

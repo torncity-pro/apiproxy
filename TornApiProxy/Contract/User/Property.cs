@@ -19,6 +19,7 @@
 ﻿namespace TornApiProxy.Contract.User
 {
     using Newtonsoft.Json;
+    using Shared;
 
     public class Modifications
     {
@@ -71,7 +72,7 @@
         public byte Doctor { get; set; }
     }
 
-    public class Property
+    public class Property : ApiListItem
     {
         [JsonProperty("owner_id")]
         public int OwnerId { get; set; }

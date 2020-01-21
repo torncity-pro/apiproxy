@@ -19,9 +19,10 @@
 ﻿namespace TornApiProxy.Contract.Torn
 {
     using Newtonsoft.Json;
+    using Shared;
     using System.Collections.Generic;
 
-    public class CompanyType
+    public class CompanyType : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -33,16 +34,19 @@
         public int DefaultEmployeeCount { get; set; }
 
         [JsonProperty("positions")]
-        public Dictionary<string, CompanyPosition> Positions { get; set; }
+        [JsonConverter(typeof(TornListConverter<CompanyPosition>))]
+        public List<CompanyPosition> Positions { get; set; }
 
         [JsonProperty("stock")]
-        public Dictionary<string, CompanyStock> Stock { get; set; }
+        [JsonConverter(typeof(TornListConverter<CompanyStock>))]
+        public List<CompanyStock> Stock { get; set; }
 
         [JsonProperty("specials")]
-        public Dictionary<string, CompanySpecial> Specials { get; set; }
+        [JsonConverter(typeof(TornListConverter<CompanySpecial>))]
+        public List<CompanySpecial> Specials { get; set; }
     }
 
-    public class CompanyPosition
+    public class CompanyPosition : ApiListItem
     {
         [JsonProperty("man_required")]
         public int ManualLaborRequired { get; set; }
@@ -69,7 +73,7 @@
         public string Description { get; set; }
     }
 
-    public class CompanySpecial
+    public class CompanySpecial : ApiListItem
     {
         [JsonProperty("effect")]
         public string Effect { get; set; }
@@ -81,7 +85,7 @@
         public int RatingRequired { get; set; }
     }
 
-    public class CompanyStock
+    public class CompanyStock : ApiListItem
     {
         [JsonProperty("cost")]
         public int? Cost { get; set; }

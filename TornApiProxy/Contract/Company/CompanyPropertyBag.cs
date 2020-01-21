@@ -43,18 +43,21 @@
         /// The current item stock of the company
         /// </summary>
         [JsonProperty("company_stock")]
-        public Dictionary<string, CompanyStock> CompanyStock { get; set; }
+        [JsonConverter(typeof(TornListConverter<CompanyStock>))]
+        public List<CompanyStock> CompanyStock { get; set; }
 
         /// <summary>
         /// The company employees
         /// </summary>
         [JsonProperty("company_employees")]
-        public Dictionary<string, CompanyEmployee> CompanyEmployees { get; set; }
+        [JsonConverter(typeof(TornListConverter<CompanyEmployee>))]
+        public List<CompanyEmployee> CompanyEmployees { get; set; }
 
         /// <summary>
         /// The news for the company
         /// </summary>
         [JsonProperty("news")]
-        public Dictionary<string, News> News { get; set; }
+        [JsonConverter(typeof(TornListConverter<News>))]
+        public List<News> News { get; set; }
     }
 }

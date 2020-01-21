@@ -19,11 +19,12 @@
 ﻿namespace TornApiProxy.Contract.Company
 {
     using Newtonsoft.Json;
+    using Shared;
     
     /// <summary>
     /// A company employee
     /// </summary>
-    public class CompanyEmployee
+    public class CompanyEmployee : ApiListItem
     {
         /// <summary>
         /// The position of the employee

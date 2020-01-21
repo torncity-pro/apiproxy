@@ -1,4 +1,4 @@
-/***********************************************************************
+﻿/***********************************************************************
   This project provides a C# interface to the Torn.com API.
   Copyright (C) 2019  TornCityPro
   
@@ -16,32 +16,13 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ************************************************************************/
 
-﻿namespace TornApiProxy.Contract.Torn
+namespace TornApiProxy.Contract.Shared
 {
     using Newtonsoft.Json;
-    using Shared;
 
-    public class OrganizedCrime : ApiListItem
+    public class ApiListItem
     {
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("members")]
-        public int Members { get; set; }
-
-        [JsonProperty("time")]
-        public int Time { get; set; }
-
-        [JsonProperty("min_cash")]
-        public int MinCash { get; set; }
-
-        [JsonProperty("max_cash")]
-        public int MaxCash { get; set; }
-
-        [JsonProperty("min_respect")]
-        public int MinRespect { get; set; }
-
-        [JsonProperty("max_respect")]
-        public int MaxRespect { get; set; }
+        [JsonIgnore]
+        public string Id { get; set; }
     }
 }

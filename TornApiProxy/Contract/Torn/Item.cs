@@ -19,7 +19,9 @@
 ﻿namespace TornApiProxy.Contract.Torn
 {
     using Newtonsoft.Json;
-    public class Item
+    using Shared;
+
+    public class Item : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }

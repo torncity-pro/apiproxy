@@ -19,14 +19,15 @@
 ﻿namespace TornApiProxy.Contract.User
 {
     using Newtonsoft.Json;
+    using Shared;
 
-    public class Message
+    public class Message : ApiListItem
     {
         [JsonProperty("timestamp")]
         public int Timestamp { get; set; }
 
         [JsonProperty("ID")]
-        public int Id { get; set; }
+        public int PlayerId { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

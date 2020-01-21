@@ -19,11 +19,12 @@
 ﻿namespace TornApiProxy.Contract.Company
 {
     using Newtonsoft.Json;
+    using Shared;
 
     /// <summary>
     /// Represents a type of item stock in a company
     /// </summary>
-    public class CompanyStock
+    public class CompanyStock : ApiListItem
     {
         /// <summary>
         /// The cost to order the item for the company stock

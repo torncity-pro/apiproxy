@@ -85,16 +85,17 @@
         public int DaysOld { get; set; }
 
         /// <summary>
-        /// A dictionary of employees in the company
+        /// A list of employees in the company
         /// </summary>
         [JsonProperty("employees")]
-        public Dictionary<string, Employee> Employees { get; set; }
+        [JsonConverter(typeof(TornListConverter<Employee>))]
+        public List<Employee> Employees { get; set; }
     }
 
     /// <summary>
     /// An employee in the company
     /// </summary>
-    public class Employee
+    public class Employee : ApiListItem
     {
         /// <summary>
         /// The name of the employee

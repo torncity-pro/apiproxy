@@ -19,8 +19,9 @@
 ﻿namespace TornApiProxy.Contract.Torn
 {
     using Newtonsoft.Json;
+    using Shared;
 
-    public class Honor
+    public class Honor : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }

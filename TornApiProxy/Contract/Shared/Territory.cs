@@ -20,7 +20,7 @@
 {
     using Newtonsoft.Json;
 
-    public class Territory
+    public class Territory : ApiListItem
     {
         [JsonProperty("sector")]
         public int Sector { get; set; }

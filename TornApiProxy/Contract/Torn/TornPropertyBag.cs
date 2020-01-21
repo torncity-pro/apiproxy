@@ -25,43 +25,55 @@
     public class TornPropertyBag : PropertyBagBase
     {
         [JsonProperty("stocks")]
-        public Dictionary<string, Stock> Stocks { get; set; }
+        [JsonConverter(typeof(TornListConverter<Stock>))]
+        public List<Stock> Stocks { get; set; }
 
         [JsonProperty("stats")]
         public Stats CityStats { get; set; }
 
         [JsonProperty("honors")]
-        public Dictionary<string, Honor> Honors { get; set; }
+        [JsonConverter(typeof(TornListConverter<Honor>))]
+        public List<Honor> Honors { get; set; }
 
         [JsonProperty("medals")]
-        public Dictionary<string, Medal> Medals { get; set; }
+        [JsonConverter(typeof(TornListConverter<Medal>))]
+        public List<Medal> Medals { get; set; }
 
         [JsonProperty("gyms")]
-        public Dictionary<string, Gym> Gyms { get; set; }
+        [JsonConverter(typeof(TornListConverter<Gym>))]
+        public List<Gym> Gyms { get; set; }
 
         [JsonProperty("items")]
-        public Dictionary<string, Item> Items { get; set; }
+        [JsonConverter(typeof(TornListConverter<Item>))]
+        public List<Item> Items { get; set; }
 
         [JsonProperty("education")]
-        public Dictionary<string, Education> Educations { get; set; }
+        [JsonConverter(typeof(TornListConverter<Education>))]
+        public List<Education> Educations { get; set; }
 
         [JsonProperty("organisedcrimes")]
-        public Dictionary<string, OrganizedCrime> OrganizedCrimes { get; set; }
+        [JsonConverter(typeof(TornListConverter<OrganizedCrime>))]
+        public List<OrganizedCrime> OrganizedCrimes { get; set; }
 
         [JsonProperty("properties")]
-        public Dictionary<string, PropertyType> Properties { get; set; }
+        [JsonConverter(typeof(TornListConverter<PropertyType>))]
+        public List<PropertyType> Properties { get; set; }
 
         [JsonProperty("companies")]
-        public Dictionary<string, CompanyType> Companies { get; set; }
+        [JsonConverter(typeof(TornListConverter<CompanyType>))]
+        public List<CompanyType> Companies { get; set; }
 
+        //// TODO: Fix this to fit into new List schema
         [JsonProperty("factiontree")]
         public Dictionary<string, Dictionary<string, FactionUpgrade>> FactionUpgradeTree { get; set; }
 
         [JsonProperty("territory")]
-        public Dictionary<string, Territory> Territories { get; set; }
+        [JsonConverter(typeof(TornListConverter<Territory>))]
+        public List<Territory> Territories { get; set; }
 
         [JsonProperty("rackets")]
-        public Dictionary<string, Racket> Rackets { get; set; }
+        [JsonConverter(typeof(TornListConverter<Racket>))]
+        public List<Racket> Rackets { get; set; }
 
         [JsonProperty("bank")]
         public BankRates BankRates { get; set; }

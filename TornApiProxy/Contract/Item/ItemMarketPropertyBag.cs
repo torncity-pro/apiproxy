@@ -28,19 +28,20 @@
     public class ItemMarketPropertyBag : PropertyBagBase
     {
         /// <summary>
-        /// A dictionary of points for sale on the market
+        /// A list of points for sale on the market
         /// </summary>
         [JsonProperty("pointsmarket")]
-        public Dictionary<string, PointsListing> PointsMarket { get; set; }
+        [JsonConverter(typeof(TornListConverter<PointsListing>))]
+        public List<PointsListing> PointsMarket { get; set; }
 
         /// <summary>
-        /// A dictionary of the item for sale in bazaars
+        /// A list of the item for sale in bazaars
         /// </summary>
         [JsonProperty("bazaar")]
         public List<MarketListing> Bazaars { get; set; }
 
         /// <summary>
-        /// A dictionary of the item for sale on the item market
+        /// A list of the item for sale on the item market
         /// </summary>
         [JsonProperty("itemmarket")]
         public List<MarketListing> ItemMarket { get; set; }

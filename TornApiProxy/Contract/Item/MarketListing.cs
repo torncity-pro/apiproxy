@@ -19,11 +19,12 @@
 ﻿namespace TornApiProxy.Contract.Item
 {
     using Newtonsoft.Json;
+    using Shared;
 
     /// <summary>
     /// A listing in a market
     /// </summary>
-    public class MarketListing
+    public class MarketListing : ApiListItem
     {
         /// <summary>
         /// The cost of them item

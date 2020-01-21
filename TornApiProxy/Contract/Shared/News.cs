@@ -20,7 +20,7 @@
 {
     using Newtonsoft.Json;
 
-    public class News
+    public class News : ApiListItem
     {
         [JsonProperty("news")]
         public string Text { get; set; }

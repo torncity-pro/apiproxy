@@ -20,7 +20,7 @@
 {
     using Newtonsoft.Json;
 
-    public class Attack
+    public class Attack : ApiListItem
     {
         [JsonProperty("timestamp_started")]
         public int TimestampStarted { get; set; }

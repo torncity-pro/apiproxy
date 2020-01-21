@@ -91,7 +91,8 @@
         public NetworthData Networth { get; set; }
 
         [JsonProperty("stocks")]
-        public Dictionary<string, Stock> Stocks { get; set; }
+        [JsonConverter(typeof(TornListConverter<Stock>))]
+        public List<Stock> Stocks { get; set; }
 
         [JsonProperty("honors_awarded")]
         public List<int> HonorsAwarded { get; set; }
@@ -130,7 +131,8 @@
         public Jobpoints JobPoints { get; set; }
 
         [JsonProperty("properties")]
-        public Dictionary<string, Property> Properties { get; set; }
+        [JsonConverter(typeof(TornListConverter<Property>))]
+        public List<Property> Properties { get; set; }
 
         [JsonProperty("server_time")]
         public int ServerTime { get; set; }
@@ -265,10 +267,12 @@
         //public List<string> BookPerks { get; set; }
 
         [JsonProperty("mesages")]
-        public Dictionary<string, Message> Messages { get; set; }
+        [JsonConverter(typeof(TornListConverter<Message>))]
+        public List<Message> Messages { get; set; }
 
         [JsonProperty("events")]
-        public Dictionary<string, Event> Events { get; set; }
+        [JsonConverter(typeof(TornListConverter<Event>))]
+        public List<Event> Events { get; set; }
 
         [JsonProperty("personalstats")]
         public PersonalStats PersonalStats { get; set; }
@@ -283,10 +287,12 @@
         public List<int> EducationCompleted { get; set; }
 
         [JsonProperty("attacks")]
-        public Dictionary<string, AttackDetailed> Attacks { get; set; }
+        [JsonConverter(typeof(TornListConverter<AttackDetailed>))]
+        public List<AttackDetailed> Attacks { get; set; }
 
         [JsonProperty("revives")]
-        public Dictionary<string, ReviveDetailed> Revives { get; set; }
+        [JsonConverter(typeof(TornListConverter<ReviveDetailed>))]
+        public List<ReviveDetailed> Revives { get; set; }
 
         [JsonProperty("discord")]
         public Discord Discord { get; set; }

@@ -20,7 +20,7 @@
 {
     using Newtonsoft.Json;
 
-    public class Revive
+    public class Revive : ApiListItem
     {
         [JsonProperty("timestamp")]
         public int Timestamp { get; set; }

@@ -19,9 +19,10 @@
 ﻿namespace TornApiProxy.Contract.Torn
 {
     using Newtonsoft.Json;
+    using Shared;
     using System.Collections.Generic;
 
-    public class PropertyType
+    public class PropertyType : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }

@@ -19,6 +19,7 @@
 ﻿namespace TornApiProxy.Contract.Torn
 {
     using Newtonsoft.Json;
+    using Shared;
     using System.Collections.Generic;
 
     public class Results
@@ -36,7 +37,7 @@
         public List<string> Endurance { get; set; }
     }
 
-    public class Education
+    public class Education : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }

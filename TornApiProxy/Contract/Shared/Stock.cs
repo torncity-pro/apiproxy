@@ -21,7 +21,7 @@
     using Newtonsoft.Json;
     using System.Collections.Generic;
 
-    public class Stock
+    public class Stock : ApiListItem
     {
         [JsonProperty("stock_id")]
         public int StockId { get; set; }

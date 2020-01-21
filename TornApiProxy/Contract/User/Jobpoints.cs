@@ -19,6 +19,7 @@
 ﻿namespace TornApiProxy.Contract.User
 {
     using Newtonsoft.Json;
+    using Shared;
     using System.Collections.Generic;
 
     public class CityJobPoints
@@ -39,7 +40,7 @@
         public int Grocer { get; set; }
     }
 
-    public class CompanyJobPoints
+    public class CompanyJobPoints : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -54,6 +55,7 @@
         public CityJobPoints Jobs { get; set; }
 
         [JsonProperty("companies")]
-        public Dictionary<string, CompanyJobPoints> Companies { get; set; }
+        [JsonConverter(typeof(TornListConverter<CompanyJobPoints>))]
+        public List<CompanyJobPoints> Companies { get; set; }
     }
 }
