@@ -381,5 +381,17 @@
 
         [JsonProperty("refills")]
         public int refills { get; set; }
+
+        [JsonProperty("racingpointsearned")]
+        public int racingpointsearned { get; set; }
+
+        [JsonProperty("raceswon")]
+        public int raceswon { get; set; }
+        
+        [JsonProperty("racesentered")]
+        public int racesentered { get; set; }
+        
+        [JsonProperty("racingskill")]
+        public int racingskill { get; set; }
     }
 }
