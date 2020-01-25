@@ -19,10 +19,9 @@
 ﻿namespace TornApiProxy.Contract.Faction
 {
     using Newtonsoft.Json;
-    using System.Collections.Generic;
     using Shared;
 
-    public class FactionMember
+    public class FactionMember : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }

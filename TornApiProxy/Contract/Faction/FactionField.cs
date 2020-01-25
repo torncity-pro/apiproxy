@@ -32,9 +32,7 @@
         public static readonly FactionField Medical = new FactionField("medical");
         public static readonly FactionField Drugs = new FactionField("drugs");
         public static readonly FactionField Boosters = new FactionField("boosters");
-
-        //public static readonly FactionField cesium = new FactionField("cesium");
-
+        public static readonly FactionField Cesium = new FactionField("cesium");
         public static readonly FactionField MainNews = new FactionField("mainnews");
         public static readonly FactionField MainNewsFull = new FactionField("mainnewsfull");
         public static readonly FactionField AttackNews = new FactionField("attacknews");

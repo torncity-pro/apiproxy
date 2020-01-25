@@ -19,8 +19,9 @@
 ﻿namespace TornApiProxy.Contract.Faction
 {
     using Newtonsoft.Json;
+    using Shared;
 
-    public class Chain
+    public class Chain : ApiListItem
     {
         [JsonProperty("chain")]
         public int HitCount { get; set; }

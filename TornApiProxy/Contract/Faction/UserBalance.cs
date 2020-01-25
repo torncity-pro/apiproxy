@@ -19,8 +19,9 @@
 ﻿namespace TornApiProxy.Contract.Faction
 {
     using Newtonsoft.Json;
+    using Shared;
 
-    public class UserBalance
+    public class UserBalance : ApiListItem
     {
         [JsonProperty("name")]
         public string Name { get; set; }

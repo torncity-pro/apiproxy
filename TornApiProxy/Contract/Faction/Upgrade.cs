@@ -19,8 +19,9 @@
 ﻿namespace TornApiProxy.Contract.Faction
 {
     using Newtonsoft.Json;
+    using Shared;
 
-    public class Upgrade
+    public class Upgrade : ApiListItem
     {
         [JsonProperty("branch")]
         public string Branch { get; set; }

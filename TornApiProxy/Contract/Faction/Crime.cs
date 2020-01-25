@@ -20,8 +20,9 @@
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
+    using Shared;
 
-    public class Crime
+    public class Crime : ApiListItem
     {
         [JsonProperty("crime_id")]
         public int CrimeId { get; set; }

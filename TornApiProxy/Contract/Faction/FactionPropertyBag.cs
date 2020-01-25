@@ -45,17 +45,16 @@
         [JsonProperty("best_chain")]
         public int BestChain { get; set; }
 
-        [JsonProperty("wars")]
-        public Dictionary<string, int> Wars { get; set; }
-
         [JsonProperty("members")]
-        public Dictionary<string, FactionMember> Members { get; set; }
+        [JsonConverter(typeof(TornListConverter<FactionMember>))]
+        public List<FactionMember> Members { get; set; }
 
         [JsonProperty("peace")]
         public Dictionary<string, int> Peace { get; set; }
 
         [JsonProperty("territory")]
-        public Dictionary<string, Territory> Territory { get; set; }
+        [JsonConverter(typeof(TornListConverter<Territory>))]
+        public List<Territory> Territory { get; set; }
 
         [JsonProperty("chain")]
         public ActiveChain Chain { get; set; }
@@ -88,43 +87,63 @@
         public List<ArmoryItem> Boosters { get; set; }
 
         [JsonProperty("mainnews")]
-        public Dictionary<string, News> MainNews { get; set; }
+        [JsonConverter(typeof(TornListConverter<News>))]
+        public List<News> MainNews { get; set; }
 
         [JsonProperty("attacknews")]
-        public Dictionary<string, News> AttackNews { get; set; }
+        [JsonConverter(typeof(TornListConverter<News>))]
+        public List<News> AttackNews { get; set; }
 
         [JsonProperty("fundsnews")]
-        public Dictionary<string, News> FundsNews { get; set; }
+        [JsonConverter(typeof(TornListConverter<News>))]
+        public List<News> FundsNews { get; set; }
 
         [JsonProperty("armorynews")]
-        public Dictionary<string, News> ArmoryNews { get; set; }
+        [JsonConverter(typeof(TornListConverter<News>))]
+        public List<News> ArmoryNews { get; set; }
 
         [JsonProperty("crimesnews")]
-        public Dictionary<string, News> CrimesNews { get; set; }
+        [JsonConverter(typeof(TornListConverter<News>))]
+        public List<News> CrimesNews { get; set; }
 
         [JsonProperty("membershipnews")]
-        public Dictionary<string, News> MembershipNews { get; set; }
+        [JsonConverter(typeof(TornListConverter<News>))]
+        public List<News> MembershipNews { get; set; }
 
         [JsonProperty("crimes")]
-        public Dictionary<string, Crime> Crimes { get; set; }
+        [JsonConverter(typeof(TornListConverter<Crime>))]
+        public List<Crime> Crimes { get; set; }
 
         [JsonProperty("attacks")]
-        public Dictionary<string, AttackDetailed> Attacks { get; set; }
+        [JsonConverter(typeof(TornListConverter<AttackDetailed>))]
+        public List<AttackDetailed> Attacks { get; set; }
 
         [JsonProperty("revives")]
         [JsonConverter(typeof(TornListConverter<ReviveDetailed>))]
         public List<ReviveDetailed> Revives { get; set; }
 
         [JsonProperty("upgrades")]
-        public Dictionary<string, Upgrade> Upgrades { get; set; }
+        [JsonConverter(typeof(TornListConverter<Upgrade>))]
+        public List<Upgrade> Upgrades { get; set; }
 
         [JsonProperty("stats")]
         public FactionStats Stats { get; set; }
 
         [JsonProperty("donations")]
-        public Dictionary<string, UserBalance> Donations { get; set; }
+        [JsonConverter(typeof(TornListConverter<UserBalance>))]
+        public List<UserBalance> Donations { get; set; }
 
         [JsonProperty("chains")]
-        public Dictionary<string, Chain> Chains { get; set; }
+        [JsonConverter(typeof(TornListConverter<Chain>))]
+        public List<Chain> Chains { get; set; }
+
+        [JsonProperty("cesium")]
+        public int Cesium { get; set; }
+
+        [JsonProperty("territory_wars")]
+        public List<TerritoryWar> TerritoryWars { get; set; }
+
+        [JsonProperty("raid_wars")]
+        public List<RaidWar> RaidWars { get; set; }
     }
 }
