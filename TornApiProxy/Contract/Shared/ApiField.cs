@@ -41,5 +41,10 @@
         /// Queries the api for the timestamp
         /// </summary>
         public static readonly ApiField Timestamp = new ApiField("timestamp");
+
+        /// <summary>
+        /// Queries the api for the parameters
+        /// </summary>
+        public static readonly ApiField Lookup = new ApiField("lookup");
     }
 }

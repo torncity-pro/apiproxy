@@ -25,6 +25,9 @@
         [JsonProperty("timestamp")]
         public int Timestamp { get; set; }
 
+        [JsonProperty("selections")]
+        public string[] Selections { get; set; }
+
         [JsonProperty("error")]
         public ExceptionInfo ErrorInfo { get; set; }
     }
