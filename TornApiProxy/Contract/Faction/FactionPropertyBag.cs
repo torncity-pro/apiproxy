@@ -112,7 +112,8 @@
         public Dictionary<string, AttackDetailed> Attacks { get; set; }
 
         [JsonProperty("revives")]
-        public Dictionary<string, ReviveDetailed> Revives { get; set; }
+        [JsonConverter(typeof(TornListConverter<ReviveDetailed>))]
+        public List<ReviveDetailed> Revives { get; set; }
 
         [JsonProperty("upgrades")]
         public Dictionary<string, Upgrade> Upgrades { get; set; }

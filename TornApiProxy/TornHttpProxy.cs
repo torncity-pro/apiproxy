@@ -86,11 +86,11 @@ namespace TornApiProxy
         /// <param name="id">The id to query</param>
         /// <param name="fields">The fields to query</param>
         /// <returns>A new propertybag with the given fields deserialized into it</returns>
-        public async Task<UserPropertyBag> GetUserPropertiesAsync(string userId, params UserField[] fields)
+        public async Task<UserPropertyBag> GetUserPropertiesAsync(object userId, params UserField[] fields)
         {
             try
             {
-                return await this.GetPropertiesAsync<UserPropertyBag>(USER, userId, fields).ConfigureAwait(false);
+                return await this.GetPropertiesAsync<UserPropertyBag>(USER, userId.ToString(), fields).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -104,11 +104,11 @@ namespace TornApiProxy
         /// <param name="id">The id to query</param>
         /// <param name="fields">The fields to query</param>
         /// <returns>A new propertybag with the given fields deserialized into it</returns>
-        public async Task<ItemMarketPropertyBag> GetItemMarketListingsAsync(string itemId, params ItemField[] fields)
+        public async Task<ItemMarketPropertyBag> GetItemMarketListingsAsync(object itemId, params ItemField[] fields)
         {
             try
             {
-                return await this.GetPropertiesAsync<ItemMarketPropertyBag>(ITEM, itemId, fields).ConfigureAwait(false);
+                return await this.GetPropertiesAsync<ItemMarketPropertyBag>(ITEM, itemId.ToString(), fields).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -122,11 +122,11 @@ namespace TornApiProxy
         /// <param name="id">The id to query</param>
         /// <param name="fields">The fields to query</param>
         /// <returns>A new propertybag with the given fields deserialized into it</returns>
-        public async Task<CompanyPropertyBag> GetCompanyPropertiesAsync(string companyId, params CompanyField[] fields)
+        public async Task<CompanyPropertyBag> GetCompanyPropertiesAsync(object companyId, params CompanyField[] fields)
         {
             try
             {
-                return await this.GetPropertiesAsync<CompanyPropertyBag>(COMPANY, companyId, fields).ConfigureAwait(false);
+                return await this.GetPropertiesAsync<CompanyPropertyBag>(COMPANY, companyId.ToString(), fields).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -140,11 +140,11 @@ namespace TornApiProxy
         /// <param name="id">The id to query</param>
         /// <param name="fields">The fields to query</param>
         /// <returns>A new propertybag with the given fields deserialized into it</returns>
-        public async Task<PropertyPropertyBag> GetPropertyPropertiesAsync(string propertyId, params PropertyField[] fields)
+        public async Task<PropertyPropertyBag> GetPropertyPropertiesAsync(object propertyId, params PropertyField[] fields)
         {
             try
             {
-                return await this.GetPropertiesAsync<PropertyPropertyBag>(PROPERTY, propertyId, fields).ConfigureAwait(false);
+                return await this.GetPropertiesAsync<PropertyPropertyBag>(PROPERTY, propertyId.ToString(), fields).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -158,11 +158,11 @@ namespace TornApiProxy
         /// <param name="id">The id to query</param>
         /// <param name="fields">The fields to query</param>
         /// <returns>A new propertybag with the given fields deserialized into it</returns>
-        public async Task<FactionPropertyBag> GetFactionPropertiesAsync(string factionId, params FactionField[] fields)
+        public async Task<FactionPropertyBag> GetFactionPropertiesAsync(object factionId, params FactionField[] fields)
         {
             try
             {
-                return await this.GetPropertiesAsync<FactionPropertyBag>(FACTION, factionId, fields).ConfigureAwait(false);
+                return await this.GetPropertiesAsync<FactionPropertyBag>(FACTION, factionId.ToString(), fields).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
@@ -176,11 +176,11 @@ namespace TornApiProxy
         /// <param name="id">The id to query</param>
         /// <param name="fields">The fields to query</param>
         /// <returns>A new propertybag with the given fields deserialized into it</returns>
-        public async Task<TornPropertyBag> GetTornPropertiesAsync(string id, params TornField[] fields)
+        public async Task<TornPropertyBag> GetTornPropertiesAsync(object id, params TornField[] fields)
         {
             try
             {
-                return await this.GetPropertiesAsync<TornPropertyBag>(TORN, id, fields).ConfigureAwait(false);
+                return await this.GetPropertiesAsync<TornPropertyBag>(TORN, id.ToString(), fields).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
