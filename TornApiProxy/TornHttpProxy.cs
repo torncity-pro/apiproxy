@@ -92,9 +92,9 @@ namespace TornApiProxy
             {
                 return await this.GetPropertiesAsync<UserPropertyBag>(USER, userId.ToString(), fields).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -110,9 +110,9 @@ namespace TornApiProxy
             {
                 return await this.GetPropertiesAsync<ItemMarketPropertyBag>(ITEM, itemId.ToString(), fields).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -128,9 +128,9 @@ namespace TornApiProxy
             {
                 return await this.GetPropertiesAsync<CompanyPropertyBag>(COMPANY, companyId.ToString(), fields).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -146,9 +146,9 @@ namespace TornApiProxy
             {
                 return await this.GetPropertiesAsync<PropertyPropertyBag>(PROPERTY, propertyId.ToString(), fields).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -164,9 +164,9 @@ namespace TornApiProxy
             {
                 return await this.GetPropertiesAsync<FactionPropertyBag>(FACTION, factionId.ToString(), fields).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -182,9 +182,9 @@ namespace TornApiProxy
             {
                 return await this.GetPropertiesAsync<TornPropertyBag>(TORN, id.ToString(), fields).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -202,9 +202,9 @@ namespace TornApiProxy
             {
                 return await this.GetResourceAsync<T>(string.Format("{0}/{1}?key={2}&selections={3}", resourceName, id, this.apiKey, string.Join(",", fields.Select(i => i.fieldName)))).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -221,7 +221,7 @@ namespace TornApiProxy
 
             if (response.IsSuccessStatusCode)
             {
-                var content = await response.Content.ReadAsStringAsync();
+                var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                 var payload = JsonConvert.DeserializeObject<T>(content);
 
                 if (payload.ErrorInfo != null)

@@ -69,7 +69,7 @@ namespace EnumGenerator
                 foreach (var lookup in lookups.OrderBy(i => i.Key))
                 {
                     enumFile.WriteLine("\t[Flags]");
-                    enumFile.WriteLine("\tpublic enum {0}", lookup.Key);
+                    enumFile.WriteLine("\tpublic enum {0}Fields", lookup.Key);
                     enumFile.WriteLine("\t{");
                     enumFile.WriteLine("\t\tlookup = 0,");
                     enumFile.WriteLine("\t\ttimestamp = 1,");

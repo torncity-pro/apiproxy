@@ -21,7 +21,7 @@ namespace TornApiProxy.Contract.Shared
 	using System;
 
 	[Flags]
-	public enum Company
+	public enum CompanyFields
 	{
 		lookup = 0,
 		timestamp = 1,
@@ -34,7 +34,7 @@ namespace TornApiProxy.Contract.Shared
 	}
 
 	[Flags]
-	public enum Faction
+	public enum FactionFields
 	{
 		lookup = 0,
 		timestamp = 1,
@@ -74,7 +74,7 @@ namespace TornApiProxy.Contract.Shared
 	}
 
 	[Flags]
-	public enum Item
+	public enum ItemFields
 	{
 		lookup = 0,
 		timestamp = 1,
@@ -84,7 +84,7 @@ namespace TornApiProxy.Contract.Shared
 	}
 
 	[Flags]
-	public enum Property
+	public enum PropertyFields
 	{
 		lookup = 0,
 		timestamp = 1,
@@ -92,7 +92,7 @@ namespace TornApiProxy.Contract.Shared
 	}
 
 	[Flags]
-	public enum Torn
+	public enum TornFields
 	{
 		lookup = 0,
 		timestamp = 1,
@@ -113,7 +113,7 @@ namespace TornApiProxy.Contract.Shared
 	}
 
 	[Flags]
-	public enum User
+	public enum UserFields
 	{
 		lookup = 0,
 		timestamp = 1,

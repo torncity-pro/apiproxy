@@ -35,6 +35,6 @@
         /// <summary>
         /// The string representation of the field to query
         /// </summary>
-        public readonly string fieldName;
+        internal readonly string fieldName;
     }
 }

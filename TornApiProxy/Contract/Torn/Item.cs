@@ -20,6 +20,7 @@
 {
     using Newtonsoft.Json;
     using Shared;
+    using System;
 
     public class Item : ApiListItem
     {
@@ -54,6 +55,6 @@
         public int Circulation { get; set; }
 
         [JsonProperty("image")]
-        public string ImageUrl { get; set; }
+        public Uri ImageUrl { get; set; }
     }
 }
