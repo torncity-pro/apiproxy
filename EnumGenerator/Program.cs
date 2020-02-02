@@ -27,10 +27,15 @@ namespace EnumGenerator
     using TornApiProxy.Contract.Shared;
     using TornApiProxy.Fields;
 
-    public class Program
+    public sealed class Program
     {
         public static async Task Main(string[] args)
         {
+            if (args == null)
+            {
+                throw new ArgumentNullException(nameof(args));
+            }
+
             var proxy = new TornHttpProxy(args[0]);
             var userLookup = await proxy.GetUserPropertiesAsync(string.Empty, UserField.Lookup).ConfigureAwait(false);
             var factionLookup = await proxy.GetFactionPropertiesAsync(string.Empty, FactionField.Lookup).ConfigureAwait(false);
@@ -50,7 +55,7 @@ namespace EnumGenerator
             string license;
             using (StreamReader licenseFile = new StreamReader("..\\..\\..\\..\\license_header.txt"))
             {
-                license = await licenseFile.ReadToEndAsync();
+                license = await licenseFile.ReadToEndAsync().ConfigureAwait(false);
             }
 
             using (StreamWriter enumFile = new StreamWriter("..\\..\\..\\..\\TornApiProxy\\Contract\\Shared\\SelectionEnums.cs", false))
