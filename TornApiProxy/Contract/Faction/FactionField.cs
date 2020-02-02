@@ -54,5 +54,7 @@
         public static readonly FactionField Stats = new FactionField("stats");
         public static readonly FactionField Donations = new FactionField("donations");
         public static readonly FactionField Chains = new FactionField("chains");
+        public static readonly FactionField Lookup = new FactionField("lookup");
+        public static readonly FactionField Timestamp = new FactionField("timestamp");
     }
 }

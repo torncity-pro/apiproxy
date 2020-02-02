@@ -28,5 +28,7 @@
         public static readonly ItemField ItemMarket = new ItemField("itemmarket");
         public static readonly ItemField Bazaar = new ItemField("bazaar");
         public static readonly ItemField PointsMarket = new ItemField("pointsmarket");
+        public static readonly ItemField Lookup = new ItemField("lookup");
+        public static readonly ItemField Timestamp = new ItemField("timestamp");
     }
 }

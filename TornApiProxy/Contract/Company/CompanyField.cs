@@ -31,5 +31,7 @@
         public static readonly CompanyField Employees = new CompanyField("employees");
         public static readonly CompanyField News = new CompanyField("news");
         public static readonly CompanyField NewsFull = new CompanyField("newsfull");
+        public static readonly CompanyField Lookup = new CompanyField("lookup");
+        public static readonly CompanyField Timestamp = new CompanyField("timestamp");
     }
 }

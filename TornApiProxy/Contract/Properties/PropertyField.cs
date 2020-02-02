@@ -29,5 +29,7 @@
         /// Properties only has one selection aside from timestamp "property"
         /// </summary>
         public static readonly PropertyField Property = new PropertyField("property");
+        public static readonly PropertyField Lookup = new PropertyField("lookup");
+        public static readonly PropertyField Timestamp = new PropertyField("timestamp");
     }
 }

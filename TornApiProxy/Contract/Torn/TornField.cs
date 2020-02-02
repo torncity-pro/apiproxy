@@ -34,5 +34,7 @@
         public static readonly TornField Stats = new TornField("stats ");
         public static readonly TornField Stocks = new TornField("stocks");
         public static readonly TornField FactionTree = new TornField("factiontree");
+        public static readonly TornField Lookup = new TornField("lookup");
+        public static readonly TornField Timestamp = new TornField("timestamp");
     }
 }

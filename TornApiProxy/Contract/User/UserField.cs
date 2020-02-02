@@ -56,5 +56,7 @@
         public static readonly UserField Refills = new UserField("refills");
         public static readonly UserField Discord = new UserField("discord");
         public static readonly UserField Gym = new UserField("gym");
+        public static readonly UserField Lookup = new UserField("lookup");
+        public static readonly UserField Timestamp = new UserField("timestamp");
     }
 }

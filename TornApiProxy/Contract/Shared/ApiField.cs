@@ -21,7 +21,7 @@
     /// <summary>
     /// Meant to be inherited to specify string value constants to give to the selection field in the api
     /// </summary>
-    public class ApiField
+    public abstract class ApiField
     {
         /// <summary>
         /// Protected constructor for the inheriting classes to use
@@ -36,15 +36,5 @@
         /// The string representation of the field to query
         /// </summary>
         public readonly string fieldName;
-
-        /// <summary>
-        /// Queries the api for the timestamp
-        /// </summary>
-        public static readonly ApiField Timestamp = new ApiField("timestamp");
-
-        /// <summary>
-        /// Queries the api for the parameters
-        /// </summary>
-        public static readonly ApiField Lookup = new ApiField("lookup");
     }
 }
