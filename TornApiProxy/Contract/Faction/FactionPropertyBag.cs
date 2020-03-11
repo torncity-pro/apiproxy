@@ -49,8 +49,8 @@
         [JsonConverter(typeof(TornListConverter<FactionMember>))]
         public List<FactionMember> Members { get; set; }
 
-        [JsonProperty("peace")]
-        public Dictionary<string, int> Peace { get; set; }
+        //[JsonProperty("peace")]
+        //public Dictionary<string, int> Peace { get; set; }
 
         [JsonProperty("territory")]
         [JsonConverter(typeof(TornListConverter<Territory>))]
@@ -140,10 +140,10 @@
         [JsonProperty("cesium")]
         public int Cesium { get; set; }
 
-        [JsonProperty("territory_wars")]
-        public List<TerritoryWar> TerritoryWars { get; set; }
+        //[JsonProperty("territory_wars")]
+        //public List<TerritoryWar> TerritoryWars { get; set; }
 
-        [JsonProperty("raid_wars")]
-        public List<RaidWar> RaidWars { get; set; }
+        //[JsonProperty("raid_wars")]
+        //public List<RaidWar> RaidWars { get; set; }
     }
 }

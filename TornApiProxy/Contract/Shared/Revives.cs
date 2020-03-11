@@ -51,5 +51,11 @@
 
         [JsonProperty("target_factionname")]
         public string TargetFactionName { get; set; }
+
+        [JsonProperty("target_hospital_reason")]
+        public string TargetHospitalReason { get; set; }
+
+        [JsonProperty("target_last_action")]
+        public LastAction TargetLastAction { get; set; }
     }
 }
